@@ -41,6 +41,7 @@ This project demonstrates how to use a 1.3-inch LCD HAT with a Raspberry Pi to d
 
 2. Clone the repository:
    ```bash
+   sudo apt install git -y
    git clone https://github.com/frogCaller/1.3inch.git
    cd 1.3inch
   
@@ -56,7 +57,7 @@ This project demonstrates how to use a 1.3-inch LCD HAT with a Raspberry Pi to d
    - You can edit the buttons in the code to make them do whatever you want.
    - Modify the check_buttons() function in the script to customize the button actions according to your requirements.
 # Troubleshooting
-1. Common Issues:
+Common Issues:
    - Ensure SPI & I2C are enabled in the Raspberry Pi configuration.
    - Check all connections if the screen does not display anything.
    - Verify all required packages are installed correctly.
