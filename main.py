@@ -105,15 +105,13 @@ def check_buttons():
     if disp.digital_read(disp.GPIO_KEY_LEFT_PIN) != 0:  # LEFT
         logging.info("Left button pressed")
         draw.rectangle([(0, 0), (240, 240)], fill="BLACK")
-        draw.text((95, 100), "LEFT", fill="RED", font=Font1)
-        disp.ShowImage(image1)
+        fortune.display_fortune(draw, Font1, disp, image1)
         time.sleep(0.3)  # Debounce delay
         
     if disp.digital_read(disp.GPIO_KEY_RIGHT_PIN) != 0:  # RIGHT
         logging.info("Right button pressed")
         draw.rectangle([(0, 0), (240, 240)], fill="BLACK")
         fortune.display_fortune(draw, Font1, disp, image1)
-        #disp.ShowImage(image1)
         time.sleep(0.3)  # Debounce delay
         
     if disp.digital_read(disp.GPIO_KEY_PRESS_PIN) != 0:  # CENTER
