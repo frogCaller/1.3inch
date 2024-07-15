@@ -1,15 +1,16 @@
-# 1.3inch
-1.3inch LCD HAT
+# 1.3inch LCD HAT
 
 <div style="display: flex; gap: 10px;">   
-    <img src="images/1.3-inch.jpeg" width="300">
+    <img src="images/verusStats.jpeg" width="300">
 </div>
+
+This project demonstrates how to use a 1.3-inch LCD HAT with a Raspberry Pi to display Verus miner stats and fortune messages.
 
 # Materials
 * [Raspberry Pi 5](https://amzn.to/45zrAKI) / [4](https://amzn.to/3KQlkVv) / [3](https://amzn.to/3xs2iSm) / [Zero 2 WH](https://amzn.to/3VO7eu2)<br />
 * [Micro SD Cards](https://amzn.to/4erXgWD)<br />
 * [1.3inch LCD HAT](https://amzn.to/3LkyXwB)<br />
-* [UPS Hat](https://amzn.to/4ceZp6I)<br />
+* [UPS Hat](https://amzn.to/4ceZp6I) / [UPS Hat](https://amzn.to/3zHiccm)<br />
 <br />
 (Amazon affiliate links)<br />
 
