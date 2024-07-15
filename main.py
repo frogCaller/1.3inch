@@ -32,8 +32,6 @@ Font1_large = ImageFont.truetype("Font02.ttf", 32)
 ########################################################
 wallet_address = "VERUS_WALLET_ADDRESS"
 
-
-
 def get_verus_price():
     url = "https://api.coingecko.com/api/v3/simple/price?ids=verus-coin&vs_currencies=usd"
     try:
@@ -57,34 +55,13 @@ def fetch_verus_data():
         data['price'] = price
         data['timestamp'] = time.time()
         
-        with open('verus_data.txt', 'w') as file:
-            json.dump(data, file)
-        
         return data
     except requests.exceptions.RequestException as e:
         print(f"Error fetching data: {e}")
         return None
 
-def load_verus_data():
-    if not os.path.exists('verus_data.txt'):
-        return None
-    
-    with open('verus_data.txt', 'r') as file:
-        data = json.load(file)
-    
-    return data
-
-def should_fetch_new_data():
-    data = load_verus_data()
-    if data is None:
-        return True
-    
-    last_fetch_time = data.get('timestamp', 0)
-    current_time = time.time()
-    return (current_time - last_fetch_time) >= 300  # fetches new data if 5 minutes is up
-
 def display_verus_data():
-    data = load_verus_data()
+    data = fetch_verus_data()
     if data is None:
         print("No data available.")
         return
@@ -98,7 +75,6 @@ def display_verus_data():
     workers = data.get("workers", [])
     num_workers = len(workers)
     
-   # draw.text((3, y), line, fill="WHITE", font=Font1)
     draw.rectangle([(0, 0), (240, 240)], fill="BLACK")
     draw.text((5, 0), f"VRSC: ${price:.2f} USD", fill="ORANGE", font=Font1_large)
     draw.text((5, 40), f"Hashrate: {hashrateString}/s", fill="CYAN", font=Font1_medium)
@@ -108,9 +84,7 @@ def display_verus_data():
     draw.text((5, 180), f"Now: {balance:.2f} VRSC", fill="GRAY", font=Font1)
     draw.text((5, 210), f"Paid: {paid:.2f} VRSC", fill="GREEN", font=Font1)
     disp.ShowImage(image1)    
-    
-    
-    
+
 logging.basicConfig(level=logging.DEBUG)
 
 def check_buttons():
@@ -139,12 +113,13 @@ def check_buttons():
         logging.info("Right button pressed")
         draw.rectangle([(0, 0), (240, 240)], fill="BLACK")
         fortune.display_fortune(draw, Font1, disp, image1)
+        #disp.ShowImage(image1)
         time.sleep(0.3)  # Debounce delay
         
     if disp.digital_read(disp.GPIO_KEY_PRESS_PIN) != 0:  # CENTER
         logging.info("Center button pressed")
         draw.rectangle([(0, 0), (240, 240)], fill="BLACK")
-        draw.text((90, 100), "CENTER", fill="RED", font=Font1)
+        draw.text((100, 100), "CENTER", fill="RED", font=Font1)
         disp.ShowImage(image1)
         time.sleep(0.3)  # Debounce delay
 
