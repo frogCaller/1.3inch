@@ -46,14 +46,24 @@ This project demonstrates how to use a 1.3-inch LCD HAT with a Raspberry Pi to d
    cd 1.3inch
   
 # Usage Instructions
-1. Display Verus miner stats:
+1. Edit `main.py` to add your Verus Wallet Address:
+  - Open main.py in a text editor.
+    ```
+    nano main.py
+    ```
+  - Locate the line where the wallet address is defined and replace the placeholder with your own Verus wallet address.
+    ```
+    wallet_address = "VERUS_WALLET_ADDRESS"
+    ```
+    
+2. Display Verus miner stats:
    - Run the script: `python3 main.py`
 
-2. Display fortune messages:
+3. Display fortune messages:
    - Utilize the fortune command to display random quotes.
    - Make sure you have fortune installed. `sudo apt install fortune -y`
    - Use the left and right arrows to display a fortune.
-3. More:
+4. More:
    - You can edit the buttons in the code to make them do whatever you want.
    - Modify the check_buttons() function in the script to customize the button actions according to your requirements.
 # Troubleshooting
