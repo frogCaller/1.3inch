@@ -7,7 +7,7 @@
 This project demonstrates how to use a 1.3-inch LCD HAT with a Raspberry Pi to display Verus miner stats and fortune messages.
 
 # Materials
-* [Zero 2 WH](https://amzn.to/3VO7eu2)<br />
+* [Raspberry pi Zero 2 WH](https://amzn.to/3VO7eu2)<br />
 * [Micro SD Cards](https://amzn.to/4erXgWD)<br />
 * [1.3inch LCD HAT](https://amzn.to/3LkyXwB)<br />
 * [UPS Hat](https://amzn.to/4ceZp6I) / [UPS Hat](https://amzn.to/3zHiccm)<br />
