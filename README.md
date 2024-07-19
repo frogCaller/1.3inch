@@ -4,7 +4,7 @@
     <img src="images/verusStats.jpeg" width="300">
 </div>
 
-This project demonstrates how to use a 1.3-inch LCD HAT with a Raspberry Pi to display Verus miner stats and fortune messages.
+This project uses a 1.3-inch LCD HAT with a Raspberry Pi to display Verus mining statistics.
 
 # Materials
 * [Raspberry pi Zero 2 WH](https://amzn.to/3VO7eu2)<br />
@@ -59,7 +59,7 @@ This project demonstrates how to use a 1.3-inch LCD HAT with a Raspberry Pi to d
 2. Display Verus miner stats:
    - Run the script: `python3 main.py`
 
-3. Display fortune messages:
+3. Display fortune messages (Optional):
    - Utilize the fortune command to display random quotes.
    - Make sure you have fortune installed. `sudo apt install fortune -y`
    - Use the left and right arrows to display a fortune.
