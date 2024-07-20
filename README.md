@@ -4,7 +4,7 @@
     <img src="images/verusStats.jpeg" width="300">
 </div>
 
-This project uses a 1.3-inch LCD HAT with a Raspberry Pi to display Verus mining statistics.
+This project uses a 1.3-inch LCD HAT with a Raspberry Pi to display Verus mining statistics using luckpool's API to get the data.
 
 # Materials
 * [Raspberry pi Zero 2 WH](https://amzn.to/3VO7eu2)<br />
