@@ -27,11 +27,11 @@ This project uses a 1.3-inch LCD HAT with a Raspberry Pi to display Verus mining
    - Navigate to Interfacing Options -> I2C -> Enable.
 
 3. **Python libraries:**
-   - sudo apt-get update
-   - sudo apt-get install python3-pip
-   - sudo apt-get install python3-pil
-   - sudo apt-get install python3-numpy
-   - sudo pip3 install spidev
+   - sudo apt-get update -y
+   - sudo apt-get install python3-pip -y
+   - sudo apt-get install python3-pil -y
+   - sudo apt-get install python3-numpy -y
+   - sudo apt-get install python3-spidev -y
    <br />
 
 # Wiring and Setup
