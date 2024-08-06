@@ -22,7 +22,7 @@ This project uses a 1.3-inch LCD HAT with a Raspberry Pi to display Verus mining
    
 2. **Enable SPI & I2C:**
    - Open a terminal on your Raspberry Pi.
-   - Run sudo raspi-config.
+   - Run `sudo raspi-config`
    - Navigate to Interfacing Options -> SPI -> Enable.
    - Navigate to Interfacing Options -> I2C -> Enable.
 
